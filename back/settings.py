@@ -1,3 +1,5 @@
+import django_heroku
+
 """
 Django settings for back project.
 
@@ -26,6 +28,7 @@ SECRET_KEY = '5yyqs_jq8xkhqbyt=w25y7i$1^k^v#=*xqc4&u(b$j59s+%*08'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
 # -- Permitir peticiones de todos los orígenes CORS
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -181,3 +184,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
